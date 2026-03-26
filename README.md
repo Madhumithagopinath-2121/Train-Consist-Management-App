@@ -1,8 +1,8 @@
 # Train-Consist-Management-App
-//Use Case 3: Track Unique Bogie IDs
-//This use case ensures that each bogie in the train has a **unique identifier**.
-//Unlike lists, a `HashSet` automatically prevents duplicate entries, making it ideal for enforcing business rules.
-//feature
-//Add bogie IDs
-//Handle duplicate entries automatically
-//Display only unique bogie IDs
+//Use Case 4: Maintain Ordered Bogie Consist
+//This use case demonstrates how to maintain the **physical order of train bogies** using `LinkedList`.
+Unlike HashSet, LinkedList preserves order and allows efficient insertions and deletions.
+//Add bogies in sequence
+//Insert bogie at a specific position
+//Remove bogies from beginning and end
+//Display final ordered consist
