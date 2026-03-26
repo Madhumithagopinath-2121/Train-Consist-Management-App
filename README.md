@@ -1,8 +1,8 @@
 # Train-Consist-Management-App
-//Use Case 2: Add Passenger Bogies to Train
-//This use case demonstrates how passenger bogies are dynamically managed using `ArrayList` in Java.
-//features:
-//Add passenger bogies (Sleeper, AC Chair, First Class)
-//Remove a bogie
-//Check if a bogie exists
-//Display final consist
+//Use Case 3: Track Unique Bogie IDs
+//This use case ensures that each bogie in the train has a **unique identifier**.
+//Unlike lists, a `HashSet` automatically prevents duplicate entries, making it ideal for enforcing business rules.
+//feature
+//Add bogie IDs
+//Handle duplicate entries automatically
+//Display only unique bogie IDs
