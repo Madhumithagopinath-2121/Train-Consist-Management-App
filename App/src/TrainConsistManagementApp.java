@@ -21,23 +21,20 @@ import java.util.Set;
  * @author Developer
  * @version 5.0
  */
+
 public class TrainConsistManagementApp {
     public static void main(String[] args) {
         System.out.println("========================================");
         System.out.println("UC5 - Preserve Insertion Order of Bogies");
         System.out.println("========================================");
         System.out.println();
-
         // LinkedHashSet preserves order and ensures uniqueness
         Set<String> formation = new LinkedHashSet<>();
-
         // ---- ADD BOGIES ----
         formation.add("Engine");
         formation.add("Sleeper");
         formation.add("Cargo");
         formation.add("Guard");
-
-        // Duplicate (will be ignored)
         formation.add("Sleeper");
 
         // Display final formation
