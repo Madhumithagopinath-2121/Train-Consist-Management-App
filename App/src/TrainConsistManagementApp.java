@@ -1,51 +1,30 @@
-import java.util.LinkedHashSet;
-import java.util.Set;
-
-/*
- * MAIN CLASS - UseCase5TrainConsistMgmnt
- *
- * Use Case 5: Preserve Insertion Order of Bogies
- *
- * Description:
- * This class maintains the exact attachment order of bogies
- * while also preventing duplicate entries using LinkedHashSet.
- *
- * At this stage, the application:
- * - Attaches bogies in order
- * - Preserves insertion sequence
- * - Avoids duplicate bogies
- * - Displays final train formation
- *
- * This maps ordered uniqueness using LinkedHashSet.
- *
- * @author Developer
- * @version 5.0
- */
+import java.util.HashMap;
+import java.util.Map;
 
 public class TrainConsistManagementApp {
     public static void main(String[] args) {
-        System.out.println("========================================");
-        System.out.println("UC5 - Preserve Insertion Order of Bogies");
-        System.out.println("========================================");
-        System.out.println();
-        // LinkedHashSet preserves order and ensures uniqueness
-        Set<String> formation = new LinkedHashSet<>();
-        // ---- ADD BOGIES ----
-        formation.add("Engine");
-        formation.add("Sleeper");
-        formation.add("Cargo");
-        formation.add("Guard");
-        formation.add("Sleeper");
-
-        // Display final formation
-        System.out.println("Final Train Formation:");
-        System.out.println(formation);
+        System.out.println("UC6 - Map Bogie to Capacity");
         System.out.println();
 
-        System.out.println("Note:");
-        System.out.println("LinkedHashSet preserves insertion order and removes duplicates automatically.");
-        System.out.println();
+        // Create a HashMap to store bogie and capacity
+        Map<String, Integer> bogieCapacity = new HashMap<>();
 
-        System.out.println("UC5 formation setup completed ...");
+        // ---- INSERT DATA ----
+        // put() maps bogie name to its capacity
+        bogieCapacity.put("Sleeper", 72);
+        bogieCapacity.put("AC Chair", 56);
+        bogieCapacity.put("First Class", 24);
+        bogieCapacity.put("Cargo", 120);
+
+
+        // ---- DISPLAY DATA ----
+        System.out.println("Bogie Capacity Details:");
+
+        for (Map.Entry<String, Integer> entry : bogieCapacity.entrySet()) {
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        }
+
+        System.out.println();
+        System.out.println("UC6 mapping completed successfully ...");
     }
 }
